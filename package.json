@@ -6,7 +6,6 @@
   "main": "",
   "scripts": {
     "start": "node server.js --env=dev",
-    "postinstall": "webpack -p",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "posttest": "npm run lint",
@@ -68,7 +67,6 @@
     "core-js": "^2.0.0",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "reflux": "^0.4.1"
+    "react-dom": "^15.0.0"
   }
 }

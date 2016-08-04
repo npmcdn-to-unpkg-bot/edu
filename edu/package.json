@@ -1,0 +1,78 @@
+{
+  "name": "Isomorphic-Universal-React-Template",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangli1990/Isomorphic-Universal-React-Template"
+  },
+  "main": "start.js",
+  "scripts": {
+    "start": "npm run build && NODE_ENV=production npm run start-server",
+    "start-server": "node --harmony ./start",
+    "nodemon": "node_modules/.bin/nodemon ./start.js",
+    "lint": "eslint src/** --ext .js --ext .jsx",
+    "build": "webpack --verbose --colors --display-error-details --config webpack.client.js",
+    "test": "_mocha --compilers js:babel-core/register test-setup.js 'src/**/*.test.js'",
+    "test-cover": "babel-node node_modules/isparta/bin/isparta cover --include '**/*.js' --include '**/*.jsx' --report text --report html node_modules/mocha/bin/_mocha -- test-setup.js 'src/**/*.test.js'",
+    "watch-client": "webpack --verbose --colors --display-error-details --config webpack.client-watch.js && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.client-watch.js",
+    "watch": "concurrently --kill-others \"npm run watch-client\" \"npm run nodemon\""
+  },
+  "dependencies": {
+    "babel-core": "^6.7.7",
+    "babel-polyfill": "^6.1.19",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "concurrently": "^2.0.0",
+    "css-loader": "^0.23.0",
+    "eslint": "^3.1.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jsdom": "^9.4.1",
+    "json-loader": "^0.5.3",
+    "koa": "^1.1.2",
+    "koa-static": "^2.0.0",
+    "node-sass": "^3.6.0",
+    "react": "^15.0.2",
+    "react-addons-test-utils": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.0.5",
+    "react-router": "^2.4.0",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.0.5",
+    "redux-thunk": "^2.0.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.1.0",
+    "chai": "^3.4.1",
+    "concurrently": "0.1.1",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-react": "^3.13.1",
+    "isparta": "^4.0.0",
+    "mocha": "^2.3.4",
+    "nodemon": "^1.9.1",
+    "pre-push": "^0.1.1",
+    "proxyquire": "^1.7.3",
+    "react-addons-test-utils": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ]
+}
