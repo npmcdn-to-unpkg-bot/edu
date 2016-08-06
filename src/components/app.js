@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 const Hello = React.createClass({
   render() {
     return(
-      <h1>perrito mio, como se topa, as {this.props.name}!</h1>
+      <h1>perrito mio, como se topa, a mi pez {this.props.name}!</h1>
     )
   }
 });
