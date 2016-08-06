@@ -1,19 +1,21 @@
-# React Tutorial: Build a ToDo App
+# React + Node Starter (for [Heroku](https://www.heroku.com/) deployment)
 
-## Live App Demo
+### UP & RUNNING
+* `npm install`
+* `npm start`
+* visit `http://localhost:8080/`
 
-Please don't abuse :).
+### CHANGELOG
+**v.0.2.0**
+This app has been updated to use React v15 and Babel v6! I have also updated the file structure to reflect naming conventions you'll most likely see in other applications. If you'd like to go back to v.0.0.1 (which should've been named 0.1.0), you can find go back to [this commit](https://github.com/alanbsmith/react-node-example/commit/dd6d745c4b7066fd12104d5005b805afaf469d91).
 
-<a href="http://react-tutorial-todos.herokuapp.com/" target="_blank">http://react-tutorial-todos.herokuapp.com/</a>
+### DEPLOYING TO HEROKU
+This app is set up for deployment to Heroku!
 
-<img src="http://i288.photobucket.com/albums/ll175/michaelcheng429/Screen%20Shot%202016-02-06%20at%201.25.51%20PM_zpszgpxpdks.png" />
+Heroku will follow the `postinstall` command in your `package.json` and compile assets with `webpack.prod.config.js`. It runs the Express web server in `server.js`. You'll notice there's a special section set up for running in development.
 
-## Usage
-1. `git clone https://github.com/michaelcheng429/react-tutorial-todos`
-2. `npm install`
-3. `webpack-dev-server`
-4. Go to `localhost:8080`
+If you've never deployed a Node app to Heroku (or just need a refresher), they have a really great walkthrough [here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction). 
 
-## YouTube Video Tutorial
+### REDUX STARTER
+If you're looking for a similar, minimalistic Redux starter, I would recommend Marc Garreau's [here](https://github.com/marcgarreau/redux-starter)
 
-<a href="https://www.youtube.com/watch?v=IR6smI_YJDE" target="_blank">https://www.youtube.com/watch?v=IR6smI_YJDE</a>
